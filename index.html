@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAVERICK</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/af37ed97f0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="loog.png" width="180px" class="logo">
+                 <ul>
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <H1>Hi,I'm <span>Yeshwanth.</span></H1>
+                <p>FRONT-END DEVELOPER</p>
+                
+            </div>
+        </div>
+    </div>
+    <!--about-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="abme.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p>I'm Yeshwanth pursuing 3rd year of BTECH in the stream of ECE at MITS,Madanapalle.I'm an aspiring web developer good at HTML,CSS and Python.I'm also intrested in Financial markets and Geo politics</p>
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">skills</div>
+                        <div class="tab-links " onclick="opentab('Experience')">experience</div>
+                        <div class="tab-links" onclick="opentab('education')">education</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web development</span><br>Designing web interfaces</li>
+                            <li><span>Content writing</span><br> content writing for youtube</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li><span>2023 - current</span><br>Web development training at APNA COLLEGE</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>2025</span><br>B-TECH from MITS,Madanapalle</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>web applications</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-youtube"></i>
+                <h2>Content writing</h2>
+                <p>content for Youtube videos</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>    
+<!--portfolio-->
+<!--contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> Contact@yeshwathreddy2910@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-phone"></i> 8333*****9</p>
+                <div class="social-icons">
+                    <a href=""><i  class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i  class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i  class="fa-brands fa-instagram"></i></a>
+                </div>
+                
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder=" Your E-mail" required>
+                    <textarea name="Message" rows="5" placeholder="your message"></textarea> 
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Made with <i class="fa-solid fa-heart"></i>  by Yeshwanth</p>
+    </div>
+</div>
+<script>
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+         }
+        for(tabcontent of tabcntents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+           
+     }
+</script>
+    
+</body>
+</html>
